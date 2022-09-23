@@ -36,7 +36,7 @@ int main(void) {
     password[i] = SetRandomValue();
   }
 
-  printf("%s", password);
+  printf("%s \0", password);
   
 }
 
