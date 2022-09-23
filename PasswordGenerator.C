@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+/*note to self
+to get a random number in a certain range, we must do the operation below:
+(upper - lower + 1)) + lower;
+*/
+
 // genuinely a project that I enjoyed doing, thanks for taking a look at it!
 
 char SetRandomValue() {
