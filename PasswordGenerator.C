@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+//@author Eduardo Lemos / @EduLemos0
+
+
 /*note to self
 to get a random number in a certain range, we must do the operation below:
 (upper - lower + 1)) + lower;
