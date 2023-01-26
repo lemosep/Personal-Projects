@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge</title>
+
+    <style>
+        .darkMode {
+            background-color: #333745;
+        }
+
+        .darkText {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text">Cool Book Page</h1>
+    <button id="dark-mode">Dark Mode</button> <br><br>
+    <form action="test.html">
+        <label class="text" for="book-name">Book name:</label>
+        <input type="text" id="book-name" name="book-name"> <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="books">
+
+    </div>
+
+    <script>
+
+        //dark mode option
+        const darkMode = document.querySelector('#dark-mode');
+
+        darkMode.addEventListener('click', () => {
+
+            const text = document.querySelector('.text');
+
+            text.classList.toggle('darkText');
+            document.body.classList.toggle('darkMode');
+        });
+
+        //add elements to 'books' div
+        const formEl = document.querySelector('form');
+
+        formEl.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const value = event.target.querySelector('input[name=book-name]').value;
+
+            //create condition if value=null
+            if (!value) {
+                event.preventDefault();
+                alert('Fill in with book name');
+            }
+
+            const div = document.querySelector('#books');
+
+            const book = document.createElement('h2');
+            book.innerHTML = value;
+            book.classList.add('text');
+
+            div.append(book);
+        });
+
+    </script>
+</body>
+
+</html>
