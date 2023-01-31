@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub info</title>
+</head>
+
+<body>
+    <h1>GitHub data viewer</h1>
+    <button>Get Data</button>
+    <br>
+    <br>
+    <script>
+        const loadData = () => {
+            const xhr = new XMLHttpRequest();
+
+            xhr.open('GET', "https://api.github.com/users/EduLemos0");
+            xhr.send(null);
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    const res = JSON.parse(xhr.responseText);
+
+                    const name = res.name;
+                    const avatarUrl = res.avatarUrl;
+                    const followers = res.followers;
+                    const blogUrl = res.blog;
+
+                    // user profile picture
+                    const avatarEl = document.createElement('img');
+                    avatarEl.setAttribute('src', avatarUrl);
+                    avatarEl.setAttribute('width', '128');
+
+                    // username
+                    const nameEl = document.createElement('h1');
+                    nameEl.innerText = name;
+
+                    // followers
+                    const followersEl = document.createElement('p');
+                    elFollowers.innerText = `Followers: ${followers}`;
+
+                    // blog url
+                    const urlEl = document.createElement('a');
+                    urlEl.setAttribute('href', `https://${blogUrl}`);
+                    urlEl.innerText = blogUrl;
+
+                    document.body.appendChild(avatarEl);
+                    document.body.appendChild(nameEl);
+                    document.body.appendChild(followersEl);
+                    document.body.appendChild(urlEl);
+                }
+            }
+        }
+
+
+        const buttonEl = document.querySelector('button');
+
+        buttonEl.addEventListener('click', loadData)
+    </script>
+</body>
+
+</html>
