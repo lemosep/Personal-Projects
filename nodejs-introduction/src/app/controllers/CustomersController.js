@@ -7,7 +7,7 @@ let customers = [
 class CustomersController {
   // Listagem dos registros
   index(req, res) {
-    return res.json();
+    return res.json(customers);
   }
 
   // Recupera 1 registro
@@ -59,4 +59,4 @@ class CustomersController {
   }
 }
 
-module.exports = new CustomersController();
+export default new CustomersController();

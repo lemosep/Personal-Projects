@@ -1,4 +1,4 @@
 // Import App and make app.listen
-const app = require("./app");
+import app from "./app";
 
 app.listen(8080);
