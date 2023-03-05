@@ -1,2 +1,2 @@
 # Personal-Projects
-Some Stuff that I came up with
+Some Stuff I came up with
