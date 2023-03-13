@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./imgs/favicon.png">
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="/src/reset.css">
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <h1>Password Generator</h1>
+    <p>Use our online generator to create a safe and strong password!</p>
+
+    <input type="text" name="password" id="password">
+
+    <input type="range" name="password-length" id="password-length" value="16" min="6" max="64" />
+
+    <button id="copy">Copy Password</button>
+
+    <script src="/src/scripts/passwordGen.js"></script>
+    <script src="/src/scripts/copyPassword.js"></script>
+</body>
+
+</html>
