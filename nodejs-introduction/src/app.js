@@ -13,7 +13,7 @@ class App {
   /* Class Constructor */
   constructor() {
     this.server = express();
-    this.middlewares();
+    this.middlewares(); //
     this.routes();
   }
 
